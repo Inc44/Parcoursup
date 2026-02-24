@@ -15,10 +15,16 @@ def flatten_dictionary(dictionary, key_prefix=""):
 def get_optimal_string_type(minimum_length, maximum_length):
 	if minimum_length == maximum_length:
 		return f"CHAR({maximum_length})"
+	"""
 	for exponent in range(1, 9):
 		optimal_length = (2**exponent) - 1
+	"""
+	for exponent in range(1, 8):
+		optimal_length = 2**exponent
 		if maximum_length <= optimal_length:
 			return f"VARCHAR({optimal_length})"
+	if maximum_length <= 255:
+		return f"VARCHAR({255})"
 	return "TEXT"
 
 

@@ -11,6 +11,15 @@
 [![Release](https://img.shields.io/github/release/Inc44/Parcoursup.svg)](https://github.com/Inc44/Parcoursup/releases)
 [![Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/Inc44)
 
+## 🎨 Command-Line Arguments
+
+| Argument                      | Description                     |
+|-------------------------------|---------------------------------|
+| `-i, --input <path>`          | Path to the input `.json` file. |
+| `-o, --output <path>`         | Path to the output `.sql` file. |
+| `-d, --database`              | Name of the MySQL database.     |
+| `-t, --table`                 | Name of the MySQL table.        |
+
 ## 🤝 Contribution
 
 Contributions, suggestions, and new ideas are heartily welcomed. If you're considering significant modifications, please initiate an issue for discussion before submitting a pull request.

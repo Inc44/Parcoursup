@@ -1,7 +1,8 @@
+from __future__ import annotations
 import json
 
 
-def flatten_dictionary(dictionary, key_prefix=""):
+def flatten_dictionary(dictionary: dict, key_prefix: str = "") -> dict:
 	flattened_dictionary = {}
 	for key, value in dictionary.items():
 		new_key = f"{key_prefix}{key}"
@@ -12,7 +13,7 @@ def flatten_dictionary(dictionary, key_prefix=""):
 	return flattened_dictionary
 
 
-def get_optimal_string_type(minimum_length, maximum_length):
+def get_optimal_string_type(minimum_length: int, maximum_length: int) -> str:
 	if minimum_length == maximum_length:
 		return f"CHAR({maximum_length})"
 	"""
@@ -28,7 +29,7 @@ def get_optimal_string_type(minimum_length, maximum_length):
 	return "TEXT"
 
 
-def get_optimal_integer_type(minimum_value, maximum_value):
+def get_optimal_integer_type(minimum_value: int, maximum_value: int) -> str:
 	if minimum_value >= -128 and maximum_value <= 127:
 		return "TINYINT"  # 8 bits
 	if minimum_value >= -32768 and maximum_value <= 32767:
@@ -38,7 +39,7 @@ def get_optimal_integer_type(minimum_value, maximum_value):
 	return "BIGINT"  # 64 bits
 
 
-def determine_mysql_type(values):
+def determine_mysql_type(values: list) -> str:
 	valid_values = [value for value in values if value is not None]
 	if not valid_values:
 		return "NULL"
@@ -54,7 +55,7 @@ def determine_mysql_type(values):
 	return "ERROR"
 
 
-def create_insert_statement(table_name, keys, row):
+def create_insert_statement(table_name: str, keys: list, row: dict) -> str:
 	formatted_values = []
 	for key in keys:
 		value = row.get(key)
@@ -69,7 +70,9 @@ def create_insert_statement(table_name, keys, row):
 	return f"INSERT INTO {table_name} VALUES ({values_string});\n"
 
 
-def convert_json_to_mysql(json_file_path, mysql_file_path, database_name, table_name):
+def convert_json_to_mysql(
+	json_file_path: str, mysql_file_path: str, database_name: str, table_name: str
+):
 	with open(json_file_path, "r", encoding="utf-8") as file:
 		data = json.load(file)
 	flattened_data = [flatten_dictionary(row) for row in data]
@@ -99,9 +102,3 @@ def convert_json_to_mysql(json_file_path, mysql_file_path, database_name, table_
 			insert_statement = create_insert_statement(table_name, valid_keys, row)
 			file.write(insert_statement)
 		file.write("COMMIT;")
-
-
-if __name__ == "__main__":
-	convert_json_to_mysql(
-		"parcoursup.json", "parcoursup.sql", "parcoursup", "parcoursup"
-	)

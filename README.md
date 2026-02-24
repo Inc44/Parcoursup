@@ -134,6 +134,10 @@
 | `etablissement_id_paysage`       | etablissement_id_paysage                                                                                                                         |
 | `composante_id_paysage`          | composante_id_paysage                                                                                                                            |
 
+## ⚠️ Disclaimers
+
+- **phpMyAdmin**: Import may take several minutes for a bzip2-compressed SQL file due to 14,252 entries with 117 attributes each.
+
 ## 📖 Usage Examples
 
 ### Standard Conversion

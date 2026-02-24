@@ -143,6 +143,15 @@
 | `-d, --database`              | Name of the MySQL database.     |
 | `-t, --table`                 | Name of the MySQL table.        |
 
+## 🐛 Bugs
+
+- `acad_mies` instead of `academies`.
+- `g_olocalisation_des_formations` instead of `geolocalisation_des_formations`.
+
+## ⛔ Known Limitations
+
+Not yet known.
+
 ## 🤝 Contribution
 
 Contributions, suggestions, and new ideas are heartily welcomed. If you're considering significant modifications, please initiate an issue for discussion before submitting a pull request.

@@ -16,14 +16,14 @@
 | Key                              | Description                                                                                                                                      |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | `session`                        | Session                                                                                                                                          |
-| `contrat_etab`                   | Statut de l’établissement de la filière de formation (public, privé…)                                                                            |
+| `contrat_etab`                   | Statut de l'établissement de la filière de formation (public, privé…)                                                                            |
 | `cod_uai`                        | Code UAI de l'établissement                                                                                                                      |
 | `g_ea_lib_vx`                    | Établissement                                                                                                                                    |
-| `dep`                            | Code départemental de l’établissement                                                                                                            |
-| `dep_lib`                        | Département de l’établissement                                                                                                                   |
-| `region_etab_aff`                | Région de l’établissement                                                                                                                        |
-| `acad_mies`                      | Académie de l’établissement                                                                                                                      |
-| `ville_etab`                     | Commune de l’établissement                                                                                                                       |
+| `dep`                            | Code départemental de l'établissement                                                                                                            |
+| `dep_lib`                        | Département de l'établissement                                                                                                                   |
+| `region_etab_aff`                | Région de l'établissement                                                                                                                        |
+| `acad_mies`                      | Académie de l'établissement                                                                                                                      |
+| `ville_etab`                     | Commune de l'établissement                                                                                                                       |
 | `lib_for_voe_ins`                | Filière de formation                                                                                                                             |
 | `select_form`                    | Sélectivité                                                                                                                                      |
 | `fili`                           | Filière de formation très agrégée                                                                                                                |
@@ -32,7 +32,7 @@
 | `fil_lib_voe_acc`                | Filière de formation détaillée bis                                                                                                               |
 | `detail_forma`                   | Filière de formation très détaillée                                                                                                              |
 | `g_olocalisation_des_formations` | Coordonnées GPS de la formation                                                                                                                  |
-| `capa_fin`                       | Capacité de l’établissement par formation                                                                                                        |
+| `capa_fin`                       | Capacité de l'établissement par formation                                                                                                        |
 | `voe_tot`                        | Effectif total des candidats pour une formation                                                                                                  |
 | `voe_tot_f`                      | Dont effectif des candidates pour une formation                                                                                                  |
 | `nb_voe_pp`                      | Effectif total des candidats en phase principale                                                                                                 |
@@ -49,25 +49,25 @@
 | `nb_voe_pc_bt`                   | Effectif des candidats néo bacheliers technologique en phase complémentaire                                                                      |
 | `nb_voe_pc_bp`                   | Effectif des candidats néo bacheliers professionnels en phase complémentaire                                                                     |
 | `nb_voe_pc_at`                   | Effectifs des autres candidats en phase complémentaire                                                                                           |
-| `nb_cla_pp`                      | Effectif total des candidats classés par l’établissement en phase principale                                                                     |
-| `nb_cla_pc`                      | Effectif des candidats classés par l’établissement en phase complémentaire                                                                       |
-| `nb_cla_pp_internat`             | Effectif des candidats classés par l’établissement en internat (CPGE)                                                                            |
-| `nb_cla_pp_pasinternat`          | Effectif des candidats classés par l’établissement hors internat (CPGE)                                                                          |
-| `nb_cla_pp_bg`                   | Effectif des candidats néo bacheliers généraux classés par l’établissement                                                                       |
-| `nb_cla_pp_bg_brs`               | Dont effectif des candidats boursiers néo bacheliers généraux classés par l’établissement                                                        |
-| `nb_cla_pp_bt`                   | Effectif des candidats néo bacheliers technologiques classés par l’établissement                                                                 |
-| `nb_cla_pp_bt_brs`               | Dont effectif des candidats boursiers néo bacheliers technologiques classés par l’établissement                                                  |
-| `nb_cla_pp_bp`                   | Effectif des candidats néo bacheliers professionnels classés par l’établissement                                                                 |
-| `nb_cla_pp_bp_brs`               | Dont effectif des candidats boursiers néo bacheliers professionnels classés par l’établissement                                                  |
-| `nb_cla_pp_at`                   | Effectif des autres candidats classés par l’établissement                                                                                        |
-| `prop_tot`                       | Effectif total des candidats ayant reçu une proposition d’admission de la part de l’établissement                                                |
-| `acc_tot`                        | Effectif total des candidats ayant accepté la proposition de l’établissement (admis)                                                             |
+| `nb_cla_pp`                      | Effectif total des candidats classés par l'établissement en phase principale                                                                     |
+| `nb_cla_pc`                      | Effectif des candidats classés par l'établissement en phase complémentaire                                                                       |
+| `nb_cla_pp_internat`             | Effectif des candidats classés par l'établissement en internat (CPGE)                                                                            |
+| `nb_cla_pp_pasinternat`          | Effectif des candidats classés par l'établissement hors internat (CPGE)                                                                          |
+| `nb_cla_pp_bg`                   | Effectif des candidats néo bacheliers généraux classés par l'établissement                                                                       |
+| `nb_cla_pp_bg_brs`               | Dont effectif des candidats boursiers néo bacheliers généraux classés par l'établissement                                                        |
+| `nb_cla_pp_bt`                   | Effectif des candidats néo bacheliers technologiques classés par l'établissement                                                                 |
+| `nb_cla_pp_bt_brs`               | Dont effectif des candidats boursiers néo bacheliers technologiques classés par l'établissement                                                  |
+| `nb_cla_pp_bp`                   | Effectif des candidats néo bacheliers professionnels classés par l'établissement                                                                 |
+| `nb_cla_pp_bp_brs`               | Dont effectif des candidats boursiers néo bacheliers professionnels classés par l'établissement                                                  |
+| `nb_cla_pp_at`                   | Effectif des autres candidats classés par l'établissement                                                                                        |
+| `prop_tot`                       | Effectif total des candidats ayant reçu une proposition d'admission de la part de l'établissement                                                |
+| `acc_tot`                        | Effectif total des candidats ayant accepté la proposition de l'établissement (admis)                                                             |
 | `acc_tot_f`                      | Dont effectif des candidates admises                                                                                                             |
 | `acc_pp`                         | Effectif des admis en phase principale                                                                                                           |
 | `acc_pc`                         | Effectif des admis en phase complémentaire                                                                                                       |
-| `acc_debutpp`                    | Dont effectif des admis ayant reçu leur proposition d’admission à l'ouverture de la procédure principale                                         |
-| `acc_datebac`                    | Dont effectif des admis ayant reçu leur proposition d’admission avant le baccalauréat                                                            |
-| `acc_finpp`                      | Dont effectif des admis ayant reçu leur proposition d’admission avant la fin de la procédure principale                                          |
+| `acc_debutpp`                    | Dont effectif des admis ayant reçu leur proposition d'admission à l'ouverture de la procédure principale                                         |
+| `acc_datebac`                    | Dont effectif des admis ayant reçu leur proposition d'admission avant le baccalauréat                                                            |
+| `acc_finpp`                      | Dont effectif des admis ayant reçu leur proposition d'admission avant la fin de la procédure principale                                          |
 | `acc_internat`                   | Dont effectif des admis en internat                                                                                                              |
 | `acc_brs`                        | Dont effectif des admis boursiers néo bacheliers                                                                                                 |
 | `acc_neobac`                     | Effectif des admis néo bacheliers                                                                                                                |
@@ -88,34 +88,34 @@
 | `acc_term_f`                     | Dont effectif des admises issues du même établissement (BTS/CPGE)                                                                                |
 | `acc_aca_orig`                   | Dont effectif des admis issus de la même académie                                                                                                |
 | `acc_aca_orig_idf`               | Dont effectif des admis issus de la même académie (Paris/Créteil/Versailles réunies)                                                             |
-| `pct_acc_debutpp`                | % d’admis ayant reçu leur proposition d’admission à l'ouverture de la procédure principale                                                       |
-| `pct_acc_datebac`                | % d’admis ayant reçu leur proposition d’admission avant le baccalauréat                                                                          |
-| `pct_acc_finpp`                  | % d’admis ayant reçu leur proposition d’admission avant la fin de la procédure principale                                                        |
-| `pct_f`                          | % d’admis dont filles                                                                                                                            |
-| `pct_aca_orig`                   | % d’admis néo bacheliers issus de la même académie                                                                                               |
-| `pct_aca_orig_idf`               | % d’admis néo bacheliers issus de la même académie (Paris/Créteil/Versailles réunies)                                                            |
-| `pct_etab_orig`                  | % d’admis néo bacheliers issus du même établissement (BTS/CPGE)                                                                                  |
-| `pct_bours`                      | % d’admis néo bacheliers boursiers                                                                                                               |
-| `pct_neobac`                     | % d’admis néo bacheliers                                                                                                                         |
-| `pct_mention_nonrenseignee`      | % d’admis néo bacheliers sans information sur la mention au bac                                                                                  |
-| `pct_sansmention`                | % d’admis néo bacheliers sans mention au bac                                                                                                     |
-| `pct_ab`                         | % d’admis néo bacheliers avec mention Assez Bien au bac                                                                                          |
-| `pct_b`                          | % d’admis néo bacheliers avec mention Bien au bac                                                                                                |
-| `pct_tb`                         | % d’admis néo bacheliers avec mention Très Bien au bac                                                                                           |
-| `pct_tbf`                        | % d’admis néo bacheliers avec mention Très Bien avec félicitations au bac                                                                        |
-| `pct_bg`                         | % d’admis néo bacheliers généraux                                                                                                                |
-| `pct_bg_mention`                 | Dont % d’admis avec mention (BG)                                                                                                                 |
-| `pct_bt`                         | % d’admis néo bacheliers technologiques                                                                                                          |
-| `pct_bt_mention`                 | Dont % d’admis avec mention (BT)                                                                                                                 |
-| `pct_bp`                         | % d’admis néo bacheliers professionnels                                                                                                          |
-| `pct_bp_mention`                 | Dont % d’admis avec mention (BP)                                                                                                                 |
-| `prop_tot_bg`                    | Effectif des candidats en terminale générale ayant reçu une proposition d’admission de la part de l’établissement                                |
-| `prop_tot_bg_brs`                | Dont effectif des candidats boursiers en terminale générale ayant reçu une proposition d’admission de la part de l’établissement                 |
-| `prop_tot_bt`                    | Effectif des candidats en terminale technologique ayant reçu une proposition d’admission de la part de l’établissement                           |
-| `prop_tot_bt_brs`                | Dont effectif des candidats boursiers en terminale technologique ayant reçu une proposition d’admission de la part de l’établissement            |
-| `prop_tot_bp`                    | Effectif des candidats en terminale professionnelle ayant reçu une proposition d’admission de la part de l’établissement                         |
-| `prop_tot_bp_brs`                | Dont effectif des candidats boursiers en terminale générale professionnelle ayant reçu une proposition d’admission de la part de l’établissement |
-| `prop_tot_at`                    | Effectif des autres candidats ayant reçu une proposition d’admission de la part de l’établissement                                               |
+| `pct_acc_debutpp`                | % d'admis ayant reçu leur proposition d'admission à l'ouverture de la procédure principale                                                       |
+| `pct_acc_datebac`                | % d'admis ayant reçu leur proposition d'admission avant le baccalauréat                                                                          |
+| `pct_acc_finpp`                  | % d'admis ayant reçu leur proposition d'admission avant la fin de la procédure principale                                                        |
+| `pct_f`                          | % d'admis dont filles                                                                                                                            |
+| `pct_aca_orig`                   | % d'admis néo bacheliers issus de la même académie                                                                                               |
+| `pct_aca_orig_idf`               | % d'admis néo bacheliers issus de la même académie (Paris/Créteil/Versailles réunies)                                                            |
+| `pct_etab_orig`                  | % d'admis néo bacheliers issus du même établissement (BTS/CPGE)                                                                                  |
+| `pct_bours`                      | % d'admis néo bacheliers boursiers                                                                                                               |
+| `pct_neobac`                     | % d'admis néo bacheliers                                                                                                                         |
+| `pct_mention_nonrenseignee`      | % d'admis néo bacheliers sans information sur la mention au bac                                                                                  |
+| `pct_sansmention`                | % d'admis néo bacheliers sans mention au bac                                                                                                     |
+| `pct_ab`                         | % d'admis néo bacheliers avec mention Assez Bien au bac                                                                                          |
+| `pct_b`                          | % d'admis néo bacheliers avec mention Bien au bac                                                                                                |
+| `pct_tb`                         | % d'admis néo bacheliers avec mention Très Bien au bac                                                                                           |
+| `pct_tbf`                        | % d'admis néo bacheliers avec mention Très Bien avec félicitations au bac                                                                        |
+| `pct_bg`                         | % d'admis néo bacheliers généraux                                                                                                                |
+| `pct_bg_mention`                 | Dont % d'admis avec mention (BG)                                                                                                                 |
+| `pct_bt`                         | % d'admis néo bacheliers technologiques                                                                                                          |
+| `pct_bt_mention`                 | Dont % d'admis avec mention (BT)                                                                                                                 |
+| `pct_bp`                         | % d'admis néo bacheliers professionnels                                                                                                          |
+| `pct_bp_mention`                 | Dont % d'admis avec mention (BP)                                                                                                                 |
+| `prop_tot_bg`                    | Effectif des candidats en terminale générale ayant reçu une proposition d'admission de la part de l'établissement                                |
+| `prop_tot_bg_brs`                | Dont effectif des candidats boursiers en terminale générale ayant reçu une proposition d'admission de la part de l'établissement                 |
+| `prop_tot_bt`                    | Effectif des candidats en terminale technologique ayant reçu une proposition d'admission de la part de l'établissement                           |
+| `prop_tot_bt_brs`                | Dont effectif des candidats boursiers en terminale technologique ayant reçu une proposition d'admission de la part de l'établissement            |
+| `prop_tot_bp`                    | Effectif des candidats en terminale professionnelle ayant reçu une proposition d'admission de la part de l'établissement                         |
+| `prop_tot_bp_brs`                | Dont effectif des candidats boursiers en terminale générale professionnelle ayant reçu une proposition d'admission de la part de l'établissement |
+| `prop_tot_at`                    | Effectif des autres candidats ayant reçu une proposition d'admission de la part de l'établissement                                               |
 | `lib_grp1`                       | Regroupement 1 effectué par les formations pour les classements                                                                                  |
 | `ran_grp1`                       | Rang du dernier appelé du groupe 1                                                                                                               |
 | `lib_grp2`                       | Regroupement 2 effectué par les formations pour les classements                                                                                  |
@@ -127,7 +127,7 @@
 | `cod_aff_form`                   | cod_aff_form                                                                                                                                     |
 | `detail_forma2`                  | Concours communs et banque d'épreuves                                                                                                            |
 | `lien_form_psup`                 | Lien de la formation sur la plateforme Parcoursup                                                                                                |
-| `taux_acces_ens`                 | Taux d’accès                                                                                                                                     |
+| `taux_acces_ens`                 | Taux d'accès                                                                                                                                     |
 | `part_acces_gen`                 | Part des terminales générales qui étaient en position de recevoir une proposition en phase principale                                            |
 | `part_acces_tec`                 | Part des terminales technologiques qui étaient en position de recevoir une proposition en phase principale                                       |
 | `part_acces_pro`                 | Part des terminales professionnelles qui étaient en position de recevoir une proposition en phase principale                                     |

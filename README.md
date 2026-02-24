@@ -134,6 +134,15 @@
 | `etablissement_id_paysage`       | etablissement_id_paysage                                                                                                                         |
 | `composante_id_paysage`          | composante_id_paysage                                                                                                                            |
 
+## 📖 Usage Examples
+
+### Standard Conversion
+
+Convert specified input file using defaults for output, database, and table.
+```bash
+python -m parcoursup.cli -i fr-esr-parcoursup.json
+```
+
 ## 🎨 Command-Line Arguments
 
 | Argument                      | Description                     |

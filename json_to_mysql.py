@@ -78,6 +78,7 @@ def convert_json_to_mysql(json_file_path, mysql_file_path, table_name):
 		for key in row.keys():
 			if key not in keys:
 				keys.append(key)
+	valid_keys = []
 	column_definitions = []
 	for key in keys:
 		column_values = [row.get(key) for row in flattened_data]
@@ -85,6 +86,7 @@ def convert_json_to_mysql(json_file_path, mysql_file_path, table_name):
 		if mysql_type == "ERROR":
 			raise ValueError(f"Error determining MySQL type for column '{key}'")
 		if mysql_type != "NULL":
+			valid_keys.append(key)
 			column_definitions.append(f"\t{key} {mysql_type}")
 	with open(mysql_file_path, "w", encoding="utf-8") as file:
 		file.write(f"DROP TABLE IF EXISTS {table_name};\n")
@@ -92,7 +94,7 @@ def convert_json_to_mysql(json_file_path, mysql_file_path, table_name):
 		file.write(",\n".join(column_definitions))
 		file.write("\n);\n")
 		for row in flattened_data:
-			insert_statement = create_insert_statement(table_name, keys, row)
+			insert_statement = create_insert_statement(table_name, valid_keys, row)
 			file.write(insert_statement)
 		file.write("COMMIT;")
 

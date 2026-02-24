@@ -69,7 +69,7 @@ def create_insert_statement(table_name, keys, row):
 	return f"INSERT INTO {table_name} VALUES ({values_string});\n"
 
 
-def convert_json_to_mysql(json_file_path, mysql_file_path, table_name):
+def convert_json_to_mysql(json_file_path, mysql_file_path, database_name, table_name):
 	with open(json_file_path, "r", encoding="utf-8") as file:
 		data = json.load(file)
 	flattened_data = [flatten_dictionary(row) for row in data]
@@ -89,6 +89,8 @@ def convert_json_to_mysql(json_file_path, mysql_file_path, table_name):
 			valid_keys.append(key)
 			column_definitions.append(f"\t{key} {mysql_type}")
 	with open(mysql_file_path, "w", encoding="utf-8") as file:
+		file.write(f"CREATE DATABASE IF NOT EXISTS {database_name};\n")
+		file.write(f"USE {database_name};\n")
 		file.write(f"DROP TABLE IF EXISTS {table_name};\n")
 		file.write(f"CREATE TABLE IF NOT EXISTS {table_name} (\n")
 		file.write(",\n".join(column_definitions))
@@ -100,4 +102,6 @@ def convert_json_to_mysql(json_file_path, mysql_file_path, table_name):
 
 
 if __name__ == "__main__":
-	convert_json_to_mysql("parcoursup.json", "parcoursup.sql", "parcoursup")
+	convert_json_to_mysql(
+		"parcoursup.json", "parcoursup.sql", "parcoursup", "parcoursup"
+	)

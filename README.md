@@ -201,7 +201,12 @@ Vu la faible qualité de la base de données originale et donc la quantité d'er
 - Si l'on rencontre une clé dupliquée et que les données ne sont pas les mêmes, on les met à jour.
 	- Si les nouvelles données sont nulles, on préserve les anciennes.
 Cela ne garantit ni le SPI ni le SPD, mais cela permet d'avoir les données les plus récentes dans les nouvelles tables (car MariaDB, par défaut, trie les données à partir du premier attribut, donc les données de 2022 seront remplacées par celles de 2023 en cas de conflit, puis par celles de 2024 et de 2025, car le premier attribut est la session), et cela évite aussi certaines pertes de données en évitant le remplacement par null si les nouvelles données ne sont pas complètes.
-Si nous pouvions avoir les dépendances fonctionnelles correctes (pas inconsistantes à cause des variations des données), nous pourrions, mais le processus manuel de correction pourrait prendre plusieurs mois, ce qui est sans doute hors de ce projet. D'un autre côté, notre nouvelle relation est bien en ...NF car il n'y a pas de liste d'attributs, donc c'est déjà en 1NF, il n'y a pas de ..., donc c'est déjà en 2NF, ...
+Si nous pouvions avoir les dépendances fonctionnelles correctes (pas inconsistantes à cause des variations des données), nous pourrions, mais le processus manuel de correction pourrait prendre plusieurs mois, ce qui est sans doute hors de ce projet. D'un autre côté, notre nouvelle relation est quand même bien en BCNF car :
+- S'il n'y a pas de liste d'attributs, alors c'est en 1NF.
+- Si chaque attribut non clé dépend de la totalité de la clé primaire sans dépendance partielle, alors c'est en 2NF.
+- S'il n'y a pas de dépendances transitives entre attributs non clés, alors c'est en 3NF.
+- Si, pour toute dépendance fonctionnelle non triviale, le déterminant est une surclé, alors le schéma final est en BCNF.
+L'intégrité de la décomposition est démontrée. Si l'intersection des schémas décomposés est une clé primaire pour l'une des relations, alors la décomposition est SPI, prévenant la génération de tuples erronés lors des jointures, ce qui est bien le cas maintenant après normalisation. Si l'union des dépendances fonctionnelles préservées dans les nouvelles tables correspond à la couverture minimale initiale, alors la décomposition est SPD, ce qui est aussi bien le cas maintenant. L'architecture basée sur les clés étrangères (dep, cod_uai, cod_aff_form) valide strictement ces conditions structurelles.
 
 ## ⚙️ Features
 
